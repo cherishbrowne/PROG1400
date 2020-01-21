@@ -7,7 +7,7 @@ public class SalesPrediction {
     // 62 percent of total sales. Based on the percentage
     // write a program that will predict how much East Coast
     // division will generate if the company has $4.6 million in sales
-    // this year. Hint: use the value
+    // this year. Hint: use the value 0.62 to represent 62 percent.
 
     public static void main(String[] args) {
 

@@ -13,10 +13,10 @@ public class PersonalInformation {
     // use only a single println statement in your program
 
     String name = "Cherish Browne";
-    String address = "56 Walter Havill";
+    String address = "56 Walter Havill Drive";
     String city = "Halifax";
     String province = "NS";
-    String postalCode = "";
+    String postalCode = "B3N 0C3";
     String phone = "1-902-717-6637";
     String diploma = "Database Administration";
 
