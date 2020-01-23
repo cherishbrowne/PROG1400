@@ -7,35 +7,46 @@ public class FinalGrade {
     public static void main(String[] args) {
 
         // grade variables
-        float assignment = 0.0f;
+        float[] assignments = new float[6];
 
         Scanner s = new Scanner(System.in);
 
         // loop 6 times to get all assignment grades
-        float finalGrade = 0.0f;
+        for (int i=0; i<6; i++) {
+            System.out.print("Enter grade for assignment " + (i+1) + ": ");
+            assignments[i] = s.nextFloat();
+        }
+
+        // find the lowest grade
         float lowest = 100.0f;
-        int i = 0;
-        do {
-            System.out.print("Enter grade for assignment " + (i + 1) + "(-1 to end: ");
-            assignment = s.nextFloat();
-
-            if (assignment >= 0.0f) {
-                finalGrade += assignment;
+        int lowestIndex = 0;
+        for (int i=0; i<6; i++) {
+            if (assignments[i] < lowest) {
+                lowest = assignments[i];
+                lowestIndex = i;
             }
+        }
 
-                if (assignment < lowest) {
-                    lowest = assignment;
+        // display all grades
+        for (int i=0; i<6; i++) {
+            if (i == lowestIndex) {
+            System.out.println("Assignment " + (i+1) + ": " + assignments[i] + " (lowest)"
+            );
+        } else {
+            System.out.println(
+                    "Assignment " + (i + 1) + ": " + assignments[i]
+            );
+        }
+
+            // calculate the final grade
+            float finalGrade = 0.0f;
+
+            for (int i=0; i<6; i++) {
+                if (i != lowestIndex) {
+                    finalGrade += assignments[i];
+                }
             }
-            // i = i + 1
-            // i += 1;
-            i++;
-
-        } while (assignment >= 0.0f);
-        // System.out.println("i = " + i); -- debug code
-        finalGrade -= lowest;
-        // subtracting 2 to account for lowest grade and -1 loop
-        finalGrade /= (i - 2);
         System.out.println("Your final grade is: " + finalGrade);
 
     }
-}
+}}
