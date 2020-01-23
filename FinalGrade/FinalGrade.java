@@ -15,7 +15,7 @@ public class FinalGrade {
         float finalGrade = 0.0f;
         float lowest = 100.0f;
         int i = 0;
-        while (assignment >= 0.0f) {
+        do {
             System.out.print("Enter grade for assignment " + (i + 1) + "(-1 to end: ");
             assignment = s.nextFloat();
 
@@ -30,7 +30,8 @@ public class FinalGrade {
             // i += 1;
             i++;
 
-        }
+        } while (assignment >= 0.0f);
+        // System.out.println("i = " + i); -- debug code
         finalGrade -= lowest;
         // subtracting 2 to account for lowest grade and -1 loop
         finalGrade /= (i - 2);
