@@ -11,6 +11,11 @@ public class SimpleFunction {
         return num;
     }
 
+    public static MyNumber modifyMyNumber(MyNumber num) {
+        num.number = num.number + 1;
+        return num;
+    }
+
     public static String addName(String name) {
         name = "Hello, " + name;
         return name;
@@ -27,6 +32,16 @@ public class SimpleFunction {
         String name = "John";
         System.out.println(addName(name));
         System.out.println(name);
+
+        // passed by reference
+        OOP.SimpleFunction.MyNumber num
+                = new OOP.SimpleFunction.MyNumber();
+        num.number = 12345;
+        MyNumber mynum = modifyMyNumber(num);
+        System.out.println("MyNumber = " + mynum.number);
+        System.out.println("Original MyNumber = " + num.number);
+
+
 
     }
 
