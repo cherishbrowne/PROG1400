@@ -1,4 +1,4 @@
-package OOP;
+package OOP.Doubles;
 
 import java.util.Scanner;
 
@@ -22,11 +22,11 @@ public class DoublesGame {
             die1.roll();
             die2.roll();
 
-            System.out.print("You rolled a " + die1.value);
-            System.out.println(" and a " + die2.value);
+            System.out.print("You rolled a " + die1.getValue());
+            System.out.println(" and a " + die2.getValue());
 
             // shot doubles!
-            if (die1.value == die2.value) {
+            if (die1.getValue() == die2.getValue()) {
                 System.out.println("You WIN!! ");
                 money *= 2;
             } else {

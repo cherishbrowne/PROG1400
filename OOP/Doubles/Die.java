@@ -1,9 +1,13 @@
-package OOP;
+package OOP.Doubles;
 
 import java.util.Random;
 
 public class Die {
-    int value;
+    private int value;
+
+    public int getValue() {
+        return this.value;
+    }
 
     public void roll() {
         Random random = new Random();
