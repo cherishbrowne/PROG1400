@@ -1,17 +1,19 @@
 package Inheritance.Vehicles;
 
-public class VehicleTest {
+public class VehicleTest extends BaseFunctions {
     public static void main(String[] args) {
 
-        Vehicle car = new Vehicle();
+        Car car = new Car();
         car.setSpeed(200);
         car.setColour(1); // red
 
-        Vehicle plane = new Vehicle();
+        Plane plane = new Plane();
+        plane.maxAltitude = 10000;
         plane.setSpeed(500);
         plane.setColour(2); // green
 
-        Vehicle boat = new Vehicle();
+        Boat boat = new Boat();
+        boat.hasEngine = false;
         boat.setSpeed(10);
         boat.setColour(3); // blue
 

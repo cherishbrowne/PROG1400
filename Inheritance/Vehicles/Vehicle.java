@@ -1,7 +1,7 @@
 package Inheritance.Vehicles;
 
 public class Vehicle extends BaseFunctions {
-    private int speed;
+    protected int speed;
     private int colour;
     protected int direction;
 
