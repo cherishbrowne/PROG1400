@@ -2,6 +2,7 @@ package OOP.Doubles;
 
 import java.util.Random;
 
+// This is the class
 public class Die {
     private int value;
 
@@ -9,8 +10,12 @@ public class Die {
         return this.value;
     }
 
+    public void setValue(int value) {
+        this.value = value;
+    }
+
     public void roll() {
         Random random = new Random();
-        value = random.nextInt(6) + 1;
+        this.value = random.nextInt(6) + 1;
     }
 }
