@@ -4,6 +4,10 @@ public class Grunt extends Employee {
 
     private int workingHours;
 
+    public int getWorkingHours() {
+        return workingHours;
+    }
+
     public Grunt(String name) {
         super(name);
         this.workingHours = 8;

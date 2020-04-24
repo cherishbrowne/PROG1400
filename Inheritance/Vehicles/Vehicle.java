@@ -1,13 +1,14 @@
 package Inheritance.Vehicles;
 
 public class Vehicle extends BaseFunctions {
+
     protected int speed;
     private int colour;
     protected int direction;
 
-//    public int getSpeed() {
-//        return speed;
-//    }
+    public int getSpeed() {
+        return speed;
+    }
 
     public void setSpeed(int speed) {
         log("Changing speed from " + this.speed);

@@ -1,6 +1,6 @@
 package Inheritance.Employees;
 
-public class Employee {
+public /* abstract */ class Employee {
 
     protected String name;
 

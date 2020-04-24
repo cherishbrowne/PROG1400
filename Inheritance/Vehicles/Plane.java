@@ -2,7 +2,15 @@ package Inheritance.Vehicles;
 
 public class Plane extends Vehicle {
 
-    int maxAltitude;
+    protected int maxAltitude;
+
+    public int getMaxAltitude() {
+        return maxAltitude;
+    }
+
+    public void setMaxAltitude(int maxAltitude) {
+        this.maxAltitude = maxAltitude;
+    }
 
     @Override
     public void setSpeed(int speed) {
